@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloPainel.css">
+    <title>Painel admin</title>
+</head>
+<body>
+    <div class="inicio-painel">
+        <div class="painel-img">
+          ....
+        </div>
+        <div class="painel-bv">
+            <h1>BEM VINDO</h1>
+
+        </div>
+        <div class="painel-sair">
+            .....
+
+        </div>
+
+    </div>
+    <div class="cont-painel">
+        <div class="menu-painel">
+            <div id="exit-painel" ><img  src="img/exit.png" height="30px" width="30px" alt=""></div>
+             <a href=""><div id="menu-item1" class="menu-item">HOME</div></a>
+            <div id="menu-item2"  class="menu-item">CAMPEONATO</div>
+            <div class="menu-item">CONTATO</div>
+            <div class="menu-item">RECRUTAMENTO</div>
+        </div>
+        <div id="menu-painel"><img  src="img/menu.png" height="40px" width="40px" alt="">
+        </div>
+        <div class="geral-painel">
+            <div class="video-painel">
+                <iframe width="700" height="400" src="https://www.youtube.com/embed/AfvoLQwjSUE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="texto-painel">
+                    <h2>Assista ao video</h2>
+                    <p>veja como funciona o painel admin para publicação do seu campeonato</p>
+                </div>
+            </div>
+            <div class="form-painel">
+                <form  action="">
+                    <label for="">formulario</label><br>
+                    <input type="text" name="titulo" placeholder="titulo"><br>
+                    <input type="text" name="titulo" placeholder="titulo">
+                    <select name="education">
+                        <option>SOLO</option>
+                        <option>DUO</option> 
+                        <option>SQUARD</option>
+                    </select><br />
+                    <textarea name="descrição" id="" cols="50" rows="10"></textarea><br>
+                    <input type="date" name="data" ><br>
+                    <input type="text" name="valor" placeholder="valor campeonato">
+                    <input type="file" name="img"><br>
+                    <input type="text" name="link" placeholder="link whats"><br>
+                    <label class="label" ><button type="submit">enviar</button></label> 
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/painel.js"></script>
+    
+</body>
+</html>

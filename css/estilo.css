@@ -1,0 +1,583 @@
+body{
+    margin: 0%;
+}
+
+/*container1*/
+
+.conteiner1{
+    background-color:rgb(21, 20, 92);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    height: 60px;
+    margin-top: -50px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+.conteiner1-2{
+    background-color:rgb(21, 20, 92);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    height: 60px;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+
+.icon-logo{
+    border-radius: 50%;
+}
+.icon-cont{
+    border-radius: 50%;
+
+}
+
+
+/*MENU*/
+#img-menu{
+    display: none;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:hover{
+    color: red ;
+    border-bottom: 1px solid white;
+    
+}
+@media (max-width:840px){
+    ul{
+        display: none;
+    }
+    .conteiner1{
+        height: 40px;
+
+    }
+    #img-menu{
+        display: block;
+    }
+    .icon-logo{
+        display: none;
+    }
+}
+
+
+/*BANNER*/
+/*container2*/
+.conteiner2{
+    overflow: hidden;
+    flex: 1;
+    margin-top: 50px;
+}
+.slider--width{
+    display: flex;
+    transition: all ease 0.3s;
+    height: 500px;
+}
+.slider--item{
+    width: 100vw;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+
+}
+.slider--controle{
+    position: absolute;
+    z-index:99;
+    width: 98vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider-control{
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+
+
+/*conteiner3*/
+/*video de apresentação*/
+
+
+video{
+    height: 711px;
+    width: 100%;
+    margin-left: -1px;
+    
+}
+
+
+@media (max-width:840px){
+    #titulo-video{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: red;
+        margin: 10px;
+        padding-top: -20px;
+        width: 300px;
+        font-size: 9pt;
+        height: 40px;
+        text-align: center;
+    }
+    #titulo-video:hover{
+        width: 320px;
+        transition-duration: 2s;
+    }
+    iframe{
+        width: 250px;
+        height: 150px;
+    }
+    .img-resp{
+        height: 25px;
+        width: 25px;
+    }
+
+
+}
+
+
+
+
+
+
+
+/*campeonato*/
+
+.conteiner4{
+    background-color: rgb(23, 19, 58);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.camp-solo{
+    height: 420px;
+    background-color: white;
+    margin: 50px;
+    width: 500px;
+    text-align: center;
+    border: 1px solid rgb(196, 173, 173);
+    border-radius: 5px;
+}
+.camp-duo{
+    height: 420px;
+    background-color: white;
+    margin: 50px;
+    width: 500px;
+    text-align: center;
+    border: 1px solid rgb(196, 173, 173);
+    border-radius: 5px;
+}
+.camp-squard{
+    height: 420px;
+    background-color: white;
+    margin: 50px;
+    width: 500px;
+    text-align: center;
+    border: 1px solid rgb(196, 173, 173);
+    border-radius: 5px;
+}
+.x-treino{
+    height: 420px;
+    background-color: white;
+    margin: 50px;
+    width: 500px;
+    text-align: center;
+    border: 1px solid rgb(196, 173, 173);
+    border-radius: 5px;
+}
+button{
+    margin-top: 20px;
+    padding: 10px;
+    width: 150px;
+    background-color: rgb(70, 70, 255);
+    border: none;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    cursor: pointer;
+    
+}
+button:hover{
+    background-color: rgb(27, 24, 202);
+    width: 200px;
+}
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(107, 106, 106);
+    font-size: 16pt;
+
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(107, 106, 106);
+}
+
+hr{
+    width: 400px;
+}
+
+@media (max-width:840px){
+    
+
+    .camp-solo{
+        height: 370px;
+        background-color: white;
+        margin: 20px;
+        width: 400px;
+        text-align: center;
+        border: 1px solid rgb(196, 173, 173);
+        border-radius: 5px;
+    }
+    .img-camp{
+        width: 300px;
+    }
+    .camp-duo{
+        height: 370px;
+        background-color: white;
+        margin: 20px;
+        width: 400px;
+        text-align: center;
+        border: 1px solid rgb(196, 173, 173);
+        border-radius: 5px;
+    }
+    .camp-squard{
+        height: 370px;
+        background-color: white;
+        margin: 20px;
+        width: 400px;
+        text-align: center;
+        border: 1px solid rgb(196, 173, 173);
+        border-radius: 5px;
+    }
+    .x-treino{
+        height: 370px;
+        background-color: white;
+        margin: 20px;
+        width: 400px;
+        text-align: center;
+        border: 1px solid rgb(196, 173, 173);
+        border-radius: 5px;
+    }
+    button{
+        margin-top: 5px;
+        padding: 10px;
+        width: 150px;
+        background-color: rgb(70, 70, 255);
+        border: none;
+        color: rgb(255, 255, 255);
+        border-radius: 2px;
+        
+    }
+    button:hover{
+        background-color: rgb(27, 24, 202);
+        border-bottom: 2px solid rgb(15, 9, 9);
+        
+    }
+    h4{
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(107, 106, 106);
+        font-size: 10pt;
+    
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(107, 106, 106);
+        font-size: 10pt;
+    }
+    
+    hr{
+        width: 200px;
+    }
+
+
+}
+
+
+/*recrutando*/
+.rec-inicio{
+   text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.rec-meio{
+    background-color: rgb(151, 78, 106);
+    width: 700px;
+    padding: 10px;
+}
+
+
+.img-divulga{
+    height: 200px;
+    padding: 30px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    color: white;
+}
+.conteiner5{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(225, 226, 226);
+    justify-content: center;
+}
+@media (max-width:840px){
+    .rec-meio{
+        background-color: rgb(151, 78, 106);
+        width: 200px;
+        padding: 3px;
+    }
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+        color: white;
+    }
+    .img-foto{
+        height: 100px;
+        width: 200px;
+    }
+    .img-divulga{
+        height: 80px;
+        padding: 30px;
+    }
+
+}
+
+
+/*rodape*/
+
+.rodape{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    justify-content: flex-end;
+    height: 90px;
+}
+.mouse{
+    cursor: pointer;
+}
+@media (max-width:840px){
+    .rodape{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    }
+}
+
+
+/*modal*/
+
+.modal{
+    height: 500px;
+    background-color: rgb(43, 42, 41);
+    width: 600px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    position: absolute;
+    display: none;
+}
+.modal-des{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+/*LOGIN*/
+
+.cont-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(241, 237, 241);
+
+}
+.login-form{
+    text-align: center;
+    background-color: rgb(19, 18, 18);
+    padding: 10px;
+    margin-top: -5px;
+  
+}
+.input-log{
+    padding: 8px;
+    width: 300px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(173, 18, 235);
+    opacity: 0.9;
+
+}
+.but-login{
+    background-color: rgb(17, 158, 80);
+    border-radius: 5px;
+    width: 201px;
+}
+.but-login:hover{
+    background-color: rgb(173, 18, 235);
+}
+label{
+    color: white;
+    font-size: 12pt;
+    padding: 0px;
+}
+#link-login{
+    color: rgb(85, 240, 46);
+}
+
+
+
+
+/*CADASTRO*/
+
+.cont-cad{
+    display: flex;
+    justify-content: space-between;
+}
+.cad-img{
+    height: 100vh;
+    background-color: thistle;
+}
+.cad-form{
+    padding: 50px;
+    height: inherit;
+    background-color: rgb(215, 224, 224);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cad-f{
+    background-color: rgb(28, 31, 28);
+    padding: 20px;
+}
+.cad-input{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px;
+    width: 250px;
+    margin: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(173, 18, 235);
+}
+
+
+
+
+
+
+
+/*CAMPEONATO*/
+
+.titulo-camp{
+    text-align: center;
+}
+#linha{
+    width: 300px;
+}
+h3{
+    text-align:left;
+    font-size: 11pt;
+    
+}
+
+.divulga-camp{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.item-camp{
+    border-radius: 5px;
+    border: solid 1px #151518;
+    background-color:#242322;
+    color: white;
+    width: 350px;
+    height: 580px;
+    text-align:center;
+    padding: 20px;
+    margin-top: 70px;
+    margin: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    border: 1px solid #000000;
+}
+.justificar{
+    text-align: center;
+}
+.texto{
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    width: 350px;
+    height: 70px;
+    padding: 2px;
+    text-align: justify;
+}
+.banner-camp{
+    margin-top: 50px;
+}
+
+
+
+
+
+/*CAMP SAIBA MAIS*/
+.princiapl-descricao{
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    padding: 10px;
+}
+
+.desc-img{
+    height: 200px;
+    width: 50%;
+    margin: 5px;
+    
+}
+.desc-desc{
+    width: 50%;
+    background-color: rgb(224, 219, 219);
+    margin: 5px;
+    padding: 20px;
+}
+
+.titulo-desc{
+    text-align: justify;
+}
+.desc-button{
+    text-align: center;
+}
+
+

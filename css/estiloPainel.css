@@ -1,0 +1,134 @@
+body{
+    margin: 0px;
+}
+
+/*video painel*/
+
+.video-painel{
+    margin-top: 50px;
+    display: flex;
+}
+.texto-painel{
+    background-color: rgb(24, 9, 80);
+    height: 200px;
+    margin-left: 10px;
+    width: 250px;
+    color: white;
+    text-align: center;
+}
+iframe{
+    margin-left: 300px;
+}
+
+
+
+
+
+
+/*PAINEL*/
+
+.inicio-painel{
+    background-color: rgb(10, 31, 61);
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+.cont-painel{
+    display: flex;
+
+}
+.menu-painel{
+    height: 520px;
+    width: 0px;
+    background-color: rgb(10, 127, 173);
+    transition: 0.8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x:hidden;
+    overflow-y:auto;
+    position: absolute;
+}
+
+.menu-item:hover{
+    color: rgb(241, 196, 45);
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.menu-abrir{
+    width: 200px;
+}
+
+.menu-item{
+ padding: 10px;
+ margin-top: 10px;
+ font-family: Arial, Helvetica, sans-serif;
+ cursor: pointer;
+ color: white;
+ 
+}
+#exit-painel{
+    width: 180px;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#menu-painel{
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+}
+
+
+
+.geral-painel{
+    background-color: rgb(1, 43, 59);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 520px;
+}
+
+
+.form-painel{
+    padding: 20px;
+    background-color: rgb(178, 185, 184);
+    margin: 20px;
+    display: none;
+    transition: all 0.5s;
+   
+}
+
+.form-painel2{
+    display: block;
+}
+
+
+input{
+    margin: 10px;
+    height: 20px;
+    width: 200px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+button{
+    height: 30px;
+    width: 150px;
+}
+.label{
+    display: flex;
+    justify-content:flex-end;
+}
+
+
