@@ -2,23 +2,6 @@ body{
     margin: 0px;
 }
 
-/*video painel*/
-
-.video-painel{
-    margin-top: 50px;
-    display: flex;
-}
-.texto-painel{
-    background-color: rgb(24, 9, 80);
-    height: 200px;
-    margin-left: 10px;
-    width: 250px;
-    color: white;
-    text-align: center;
-}
-iframe{
-    margin-left: 300px;
-}
 
 
 
@@ -92,7 +75,7 @@ a{
 
 
 .geral-painel{
-    background-color: rgb(1, 43, 59);
+    background-color: rgb(92, 177, 211);
     width: 100%;
     display: flex;
     justify-content: center;
