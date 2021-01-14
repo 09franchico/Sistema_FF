@@ -22,7 +22,10 @@ fechar.addEventListener("click",()=>{
     if(fecharMenu.classList.contains("menu-abrir")){
         fecharMenu.classList.remove("menu-abrir");
         document.querySelector("#menu-painel").style.display="block";
+        remover2();
+        remove1();
     }
+    
 })
 
 
