@@ -29,8 +29,6 @@ fechar.addEventListener("click",()=>{
 
 //abrir home
 
-
-
 //abrir o formulario camp
 let principal=document.querySelector("#menu-item2");
 principal.addEventListener("click",()=>{
@@ -44,15 +42,43 @@ principal.addEventListener("click",()=>{
             pegar.style.opacity = 1; // efeito 
          },200);
         pegar.classList.add("form-painel2");
-         remove();
+        remover2();
+        
+    }
+})
+
+
+//ABRI O FORMULARIO RECRUTAMENTO
+let menuRecrutamento= document.querySelector("#menu-item4");
+menuRecrutamento.addEventListener("click",()=>{
+    let pegarModal = document.querySelector(".cont-recrutamento")
+    if(pegarModal.classList.contains("form-painel2")==true){
+        pegarModal.classList.remove("form-painel2");
+        pegarModal.style.opacity=0;
+        
+        
+    }else{
+        setTimeout(()=>{
+            pegarModal.style.opacity = 1; // efeito 
+         },200);
+        pegarModal.classList.add("form-painel2");
+        remove1();
+           
+
+
     }
 })
 
 
 
+
 // remover o home
-function remove(){
-    let sumir=document.querySelector(".video-painel");
-    sumir.style.display="none";
+function remove1(){
+    let sumir=document.querySelector(".form-painel");
+    sumir.classList.remove("form-painel2");
+}
+function remover2(){
+    let sumir=document.querySelector(".cont-recrutamento");
+    sumir.classList.remove("form-painel2");
 
 }

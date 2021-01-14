@@ -82,9 +82,7 @@ a{
 
 
 
-/*formularios*/
-
-
+/*formularios  GUILDAS*/
 
 .geral-painel{
     background-color: rgb(92, 177, 211);
@@ -154,9 +152,11 @@ h4{
 #file{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    margin-left: 10px;
 }
 button{
-    height: 30px;
+    height: 35px;
     width: 150px;
     border: none;
     outline: none;
@@ -166,7 +166,6 @@ button{
 button:hover{
     background-color: rgb(91, 13, 163);
 }
-
 .label{
     display: flex;
     justify-content:flex-end;
@@ -174,3 +173,17 @@ button:hover{
 }
 
 
+/*FORMULARIO RECRUTAMENTO*/
+.cont-recrutamento{
+    background-color: rgb(148, 147, 144);
+    padding: 20px;
+    margin-top: 20px;
+    height: 400px;
+    display: flex;
+    display: none;
+}
+
+
+.form-painel2{
+    display: block;
+}
