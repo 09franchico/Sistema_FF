@@ -87,8 +87,3 @@ function remover2(){
 }
 
 
-function fecharM(){
-    let fecharmenu=document.querySelector(window);
-    
-
-}
