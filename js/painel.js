@@ -30,8 +30,6 @@ fechar.addEventListener("click",()=>{
 
 
 
-//abrir home
-
 //abrir o formulario camp
 let principal=document.querySelector("#menu-item2");
 principal.addEventListener("click",()=>{
@@ -75,13 +73,22 @@ menuRecrutamento.addEventListener("click",()=>{
 
 
 
-// remover o home
+// REMOVER OS FORMULARIOS QUANDO CLICAR NO OUTRO
 function remove1(){
     let sumir=document.querySelector(".form-painel");
     sumir.classList.remove("form-painel2");
+    sumir.style.opacity=0;
 }
 function remover2(){
     let sumir=document.querySelector(".cont-recrutamento");
     sumir.classList.remove("form-painel2");
+    sumir.style.opacity=0;
+
+}
+
+
+function fecharM(){
+    let fecharmenu=document.querySelector(window);
+    
 
 }
