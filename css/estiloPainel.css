@@ -90,6 +90,9 @@ a{
     display: flex;
     justify-content: center;
     height: 700px;
+    background-image: url(/img/bannerPainel.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 

@@ -1,4 +1,9 @@
 
+let back=document.querySelector(".geral-painel");
+back.style.backgroundImage ="url('img/bannerPainel.png')";
+
+
+
 //abrir menu do painel
 let painelMenu=document.querySelector("#menu-painel");
 painelMenu.addEventListener("click",()=>{
@@ -85,5 +90,4 @@ function remover2(){
     sumir.style.opacity=0;
 
 }
-
 
