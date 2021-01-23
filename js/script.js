@@ -40,7 +40,8 @@ function updateMargin(){
     document.querySelector('.slider--width').style.marginLeft = `-${newMargin}px`;
 }
 
-setInterval(proximo,3000);
+//setInterval(proximo,3000);
+
 
 
 

@@ -99,7 +99,7 @@ a{
 
 .form-painel{
     padding: 20px;
-    background-color: rgb(178, 185, 184);
+    background-color: rgb(65, 59, 60);
     margin: 20px;
     display: none;
     transition: all 0.5s;
@@ -179,7 +179,7 @@ button:hover{
 
 /*FORMULARIO RECRUTAMENTO*/
 .cont-recrutamento{
-    background-color: rgb(178, 185, 184);
+    background-color: rgb(65, 59, 60);
     padding: 20px;
     margin-top: 20px;
     height: 400px;
