@@ -14,12 +14,12 @@ body{
 /*PAINEL*/
 
 .inicio-painel{
-    background-color: rgb(10, 31, 61);
+    background-color: rgb(16, 17, 17);
     display: flex;
     justify-content: space-between;
     height: 30px;
     padding: 20px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(238, 205, 18);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
@@ -35,7 +35,7 @@ body{
 .menu-painel{
     height:700px;
     width: 0px;
-    background-color: rgb(10, 127, 173);
+    background-color: rgb(20, 20, 20);
     transition: 0.8s;
     display: flex;
     flex-direction: column;
@@ -46,9 +46,8 @@ body{
 }
 
 .menu-item:hover{
-    color: rgb(241, 196, 45);
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
+    color: rgb(204, 195, 250);
+    border-bottom: 2px solid rgb(238, 235, 70);
 }
 a{
     text-decoration: none;
@@ -99,13 +98,13 @@ a{
 
 .form-painel{
     padding: 20px;
-    background-color: rgb(65, 59, 60);
+    background-color: rgb(173, 172, 172);
     margin: 20px;
     display: none;
     transition: all 0.5s;
     height: 600px;
     width: 50%;
-    border: 2px solid rgb(15, 15, 15);
+    border: 2px solid rgb(240, 195, 195);
    
 }
 
@@ -179,13 +178,13 @@ button:hover{
 
 /*FORMULARIO RECRUTAMENTO*/
 .cont-recrutamento{
-    background-color: rgb(65, 59, 60);
+    background-color: rgb(173, 172, 172);
     padding: 20px;
     margin-top: 20px;
     height: 400px;
     display: flex;
     display: none;
-    border: 2px solid rgb(15, 15, 15);
+    border: 2px solid rgb(240, 195, 195);
 
 }
 

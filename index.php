@@ -16,9 +16,9 @@
         <div class="menu">
             <img id="img-menu" src="img/menu.png" height="40px" width="40px" alt="">
             <ul>
-                <a href=""><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
-                <a href=""><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
-                <a href="login.html"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
+                <a href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
+                <a href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
+                <a href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
             </ul>
         </div>
     </div>
@@ -48,7 +48,7 @@
             <h4>CAMPEONATO SOLO</h4>
             <P>AQUI VAI TER UMA DESCRIÇÃO SOBRE O CAMPEONATO SOLO, OS MELHOR</P>
             <hr>
-            <a href="campeonatos.html"><button>ACESSAR</button></a>
+            <a href="campeonatos.php?tipo=solo"><button>ACESSAR</button></a>
 
         </div>
         <div class="camp-duo">

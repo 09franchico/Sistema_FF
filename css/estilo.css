@@ -13,18 +13,16 @@ body{
     position: fixed;
     z-index: 999;
     width: 100%;
-    border-bottom: 2px solid white;
     opacity: 0.9;
 }
 .conteiner1-2{
-    background-color:rgb(21, 20, 92);
+    background-color:rgb(22, 21, 21);
     display: flex;
-    position: fixed;
-    z-index: 999;
     justify-content: space-between;
     padding: 5px;
     height: 60px;
     width: 100%;
+    justify-content: flex-end;
     border-bottom: 2px solid white;
 }
 .menu{
@@ -72,7 +70,7 @@ a{
     font-family: Arial, Helvetica, sans-serif;
 }
 a:hover{
-    color: red ;
+    color: rgb(252, 236, 21) ;
     border-bottom: 1px solid white;
     
 }
@@ -333,7 +331,7 @@ hr{
     justify-content: center;
 }
 .rec-meio{
-    background-color: rgb(207, 55, 8);
+    background-color: rgb(15, 9, 12);
     width: 700px;
     padding: 10px;
 }
@@ -529,6 +527,7 @@ h3{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 .item-camp{
     border-radius: 5px;
