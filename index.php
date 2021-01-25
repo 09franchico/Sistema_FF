@@ -1,3 +1,14 @@
+<?php
+require("classes/classe_produtos.php");
+$dadosclasse = new produtos("sistema_ff","localhost:3307","root","");
+
+$dadosRecrutamento = $dadosclasse->pegarRecrutamento();
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +67,7 @@
             <h4>CAMPEONATO DUO</h4>
             <P>AQUI VAI TER UMA DESCRIÇÃO SOBRE O CAMPEONATO SOLO, OS MELHORES</P>
             <hr>
-            <a href=""><button>ACESSAR</button></a>
+            <a href="campeonatos.php?tipo=duo"><button>ACESSAR</button></a>
 
         </div>
         <div class="camp-squard">
@@ -64,7 +75,7 @@
             <h4>CAMPEONATO SQUARD</h4>
             <P>AQUI VAI TER UMA DESCRIÇÃO SOBRE O CAMPEONATO SOLO, OS MELHORES</P>
             <hr>
-            <a href=""><button>ACESSAR</button></a>
+            <a href="campeonatos.php?tipo=squard"><button>ACESSAR</button></a>
  
         </div>
         <div class="x-treino">
@@ -93,27 +104,24 @@
      </div>
 
      <div class="conteiner5">
+       <?php
+         for ($i=0; $i <count($dadosRecrutamento) ; $i++) { 
+       
+        ?>
          <div class="img-divulga" onclick="abrir()" >
-             <img  class="img-foto" src="img/solo.jpg" height="200px" width="400px" alt="">
+         <img  class="img-foto" src="./imagens/<?php echo $dadosRecrutamento[$i]["nome_imagem"];?>" height="200px" width="400px" alt="">
          </div>
-
          <div class="modal" >
-               <img src="img/novobanner2.png" height="300px" width="500px" alt="">
+               <img src="./imagens/<?php echo $dadosRecrutamento[$i]["nome_imagem"]; ?>" height="300px" width="500px" alt="">
                <h3 class="modal-des">DESCRIÇÃO</h3>
-                    <p>aqui vai ter uma pequena descrição</p></h3><br><br>
-               <a href="#"><button>CONTATO</button></a>
+                    <p><?php echo $dadosRecrutamento[$i]["descricao"]; ?></p></h3><br><br>
+               <a href="<?php echo $dadosRecrutamento[$i]["link"]; ?>"><button>CONTATO</button></a>
          </div>
-         <div class="img-divulga" >
-            <img  class="img-foto" src="img/solo.jpg" height="200px" width="400px" alt="">
-        </div>
-        <div class="img-divulga" >
-            <img  class="img-foto" src="img/solo.jpg" height="200px" width="400px" alt="">
-        </div>
-        <div class="img-divulga" >
-            <img  class="img-foto" src="img/solo.jpg" height="200px" width="400px" alt="">
-        </div>
-     </div>
+         <?php
 
+           }
+
+         ?>
 
      
      <!--fotter-->

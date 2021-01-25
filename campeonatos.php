@@ -9,9 +9,6 @@ if(isset($_GET["tipo"])){
 
     $tipo =addslashes($_GET["tipo"]);
     $dadosCamp = $dadosProduto ->buscarCamp($tipo);
-     
-
-   
 
 }
 
@@ -60,10 +57,12 @@ if(isset($_GET["tipo"])){
         </div>
         <div class="divulga-camp">
     
-            <?php
+         <?php 
+
+            if(!empty($dadosCamp)){
             
         // for para colocar od dados no formuario.
-           for ($i=0; $i <count($dadosCamp) ; $i++) { 
+            for ($i=0; $i <count($dadosCamp) ; $i++) { 
 
             ?><div class="item-camp">
                 <img src="./imagens/<?php echo $dadosCamp[$i]["imagem"];?>" height="200px" width="350px" alt="">
@@ -79,7 +78,13 @@ if(isset($_GET["tipo"])){
                 
             </div> 
             <?php
+             
             }
+        }else{
+
+            echo"SEM CAMPEONATOS NO MOMENTO !";
+        }
+
              ?>  
 
 

@@ -8,6 +8,8 @@ require("verificaLogin.php");
 
 <?php
 
+// cadstrar os campeonatos no banco de dados
+
 require("classes/classe_produtos.php");
 $dadosCadastro = new produtos("sistema_ff","localhost:3307","root","");
 
@@ -26,9 +28,6 @@ if(isset($_POST["titulo"])){
     
     $imagem = $_FILES["img"]["name"].rand(1,999).'.png';
 
-    //verifica se foi enviada 
-    //if(isset($_FILES["foto"])){
-
         // mover a foto para a pasta img
     move_uploaded_file($_FILES["img"]["tmp_name"],"imagens/".$imagem);
 
@@ -46,23 +45,46 @@ if(isset($_POST["titulo"])){
     }
 
     
+ 
+
+}
+
+//cadastrar os recrutamento
+
+if(isset($_POST["imagem"])){
+
+    $descricao = $_POST["descricao"];
+    $link = $_POST["link"];
+    $id = $_SESSION["email"];
+
+    //pega a imagem e envia para a pasta IMAGENS
+    $imagem = $_FILES["img"]["name"].rand(1,999).'.png';
+    move_uploaded_file($_FILES["img"]["tmp_name"],"imagens/".$imagem);
+
+    // verifica se os campos nao estao vazio
+    if(!empty($descricao) && !empty("$link") ){
+        $dadosRecrutamento = $dadosCadastro->recrutamento($descricao,$imagem,$link,$id);
+        if($dadosRecrutamento){
+            echo"<script>alert('Dados Publicados com sucesso !')</script>";
+        }else{
+            echo"<script>alert('Erro ao cadastrar')</script>";
+        }
 
 
+    }else{
+        echo"<script>alert('Preenchas todos os Campos')</script>";
 
+    }
 
     
-    
 
-    // }
 
-    
 
 }
 
 
 
 ?>
-
 
 
 <!DOCTYPE html>
@@ -138,15 +160,15 @@ if(isset($_POST["titulo"])){
 
             <!--Recrutamento-->
             <div class="cont-recrutamento">
-                <form action="">
+                <form action="painel.php" method="POST" enctype="multipart/form-data">
                     <label id="inicio-form">RECRUTAMENTO</label><br>
                     <label >
                         <h4>DESCRIÇÃO</h4>
-                        <textarea name="descrição" id="" cols="80" rows="10"></textarea><br>
+                        <textarea name="descricao" id="" cols="80" rows="10"></textarea><br>
                     </label>
                     <label id="file2">
                         <h4>IMAGEM</h4>
-                        <input type="file" name="img" placeholder="imagem">
+                        <input type="file" name="imagem" placeholder="imagem">
                     </label>
                     <label > 
                         <h4>LINK WHATSAPP</h4>

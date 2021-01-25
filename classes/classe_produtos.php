@@ -21,8 +21,6 @@ class produtos{
 
 
     //cadastrar os campeonatos no painel
-
-
     public function cadastroCamp($tipo,$titulo,$premiacao,$descricao,$data,$valor,$imagem,$link,$id)
     {
        
@@ -44,13 +42,12 @@ class produtos{
    }
 
       
-     //dados dos campeonatos
-
+     //dados dos campeonatos 
 
    public function buscarCamp($tipo){
+
         
-      
-        $cmd=$this->pdo->prepare("select * from campeonatos where tipo=:t");
+        $cmd=$this->pdo->prepare("SELECT * from campeonatos where tipo=:t");
         $cmd->bindValue(":t",$tipo);
         $cmd->execute();
         
@@ -59,7 +56,7 @@ class produtos{
 
             $dados = $cmd->fetchAll(PDO::FETCH_ASSOC);
         }else{
-            $dados=array("nao passou");
+            $dados=array();
         }
 
         return $dados;
@@ -67,11 +64,12 @@ class produtos{
    }
 
 
-
-
+//entrar nom camp com o id
    public function dadosCampeonato($id){
+     
+    
 
-    $cmd=$this->pdo->prepare("select * from campeonatos where id_camp =:id");
+    $cmd=$this->pdo->prepare("SELECT * from campeonatos where id_camp =:id");
     $cmd ->bindValue(":id",$id);
     $cmd->execute();
     
@@ -79,13 +77,49 @@ class produtos{
 
         $dados = $cmd->fetchAll(PDO::FETCH_ASSOC);
     }else{
-        $dados=array("nao passou");
+        $dados=array("ERRO");
     }
 
     return $dados;
 
 
    }
+
+
+
+
+   public function recrutamento($descricao,$imagem,$link,$id_usu){
+
+       $cmd= $this->pdo->prepare("INSERT into recrutamento (descricao,nome_imagem,link,fk_id_usuario) value 
+       (:d,:i,:l,:id)");
+       $cmd->bindValue(":d",$descricao);
+       $cmd->bindValue(":i",$imagem);
+       $cmd->bindValue(":l",$link);
+       $cmd->bindValue(":id",$id_usu);
+       $cmd->execute();
+       return $cmd;
+   }
+
+
+
+
+    public function pegarRecrutamento()
+   {
+
+       $cmd=$this->pdo->query("SELECT * from recrutamento");
+        
+       if($cmd->rowCount()>0){
+           $dados = $cmd -> fetchAll(PDO::FETCH_ASSOC);
+       }else{
+           $dados = array();
+       }
+       return $dados;
+       
+   }
+
+
+
+
 
 
 
