@@ -45,7 +45,6 @@ if(!empty($_POST["email"]) && !empty($_POST["senha"])){
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

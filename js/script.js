@@ -50,10 +50,11 @@ function updateMargin(){
 
 function abrir(){
     let aparecer = document.querySelector('.modal');
-    if(aparecer.style.display =="none"){
+   if(aparecer.style.display =="none"){
         aparecer.style.display="block";
     }else{
         aparecer.style.display="none";
     }
 
 }
+//abrir();

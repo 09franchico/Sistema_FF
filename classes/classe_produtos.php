@@ -36,7 +36,6 @@ class produtos{
         $cmd->bindValue(":l",$link);
         $cmd->bindValue(":id",$id);
         $cmd->execute();
-
         return $cmd;
  
    }
@@ -87,7 +86,7 @@ class produtos{
 
 
 
-
+   // INSEIR  O RECRUTAMENTO
    public function recrutamento($descricao,$imagem,$link,$id_usu){
 
        $cmd= $this->pdo->prepare("INSERT into recrutamento (descricao,nome_imagem,link,fk_id_usuario) value 
@@ -102,7 +101,7 @@ class produtos{
 
 
 
-
+   // pegar o recrutamento
     public function pegarRecrutamento()
    {
 
@@ -113,9 +112,39 @@ class produtos{
        }else{
            $dados = array();
        }
+       
        return $dados;
        
    }
+
+
+  // / pegar os dados do campe NO BANCO DE DADOS e mostrar no painel  
+   public function pegarDadosCamp($id){
+
+    $cmd= $this->pdo->prepare("SELECT * from campeonatos where fk_id_usuario= :id");
+    $cmd ->bindValue(":id",$id);
+    $cmd->execute();
+
+    if($cmd->rowCount()>0){
+        $dados = $cmd -> fetchAll(PDO::FETCH_ASSOC);
+    }else{
+        $dados = array();
+    }
+    
+    return $dados;
+
+   }
+
+   //deletar o CAMPEONATO pelo ID no PAINEL
+   public function deletar($id_d){
+       $cmd= $this->pdo->prepare("DELETE from campeonatos where id_camp = :id");
+       $cmd -> bindValue(":id",$id_d);
+       $cmd -> execute();  
+
+   }
+
+
+
 
 
 

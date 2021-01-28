@@ -34,9 +34,9 @@ if(isset($_GET["id"])){
         <div >
             <img id="img-menu" src="img/menu.png" height="40px" width="40px" alt="">
             <ul>
-                <a href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
-                <a href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
-                <a href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
+                <a class="mnu" href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
+                <a class="mnu" href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
+                <a class="mnu" href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
             </ul>
         </div>
     </div>

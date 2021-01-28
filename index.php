@@ -4,6 +4,7 @@ $dadosclasse = new produtos("sistema_ff","localhost:3307","root","");
 
 $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
 
+
 ?>
 
 
@@ -27,9 +28,9 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
         <div class="menu">
             <img id="img-menu" src="img/menu.png" height="40px" width="40px" alt="">
             <ul>
-                <a href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
-                <a href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
-                <a href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
+                <a class="mnu" href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
+                <a class="mnu" href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
+                <a class="mnu" href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
             </ul>
         </div>
     </div>
@@ -105,17 +106,18 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
 
      <div class="conteiner5">
        <?php
+       
          for ($i=0; $i <count($dadosRecrutamento) ; $i++) { 
        
         ?>
          <div class="img-divulga" onclick="abrir()" >
-         <img  class="img-foto" src="./imagens/<?php echo $dadosRecrutamento[$i]["nome_imagem"];?>" height="200px" width="400px" alt="">
+              <img  class="img-foto" src="./imagens/<?php echo $dadosRecrutamento[$i]["nome_imagem"]?>" height="200px" width="400px" alt="">
          </div>
          <div class="modal" >
-               <img src="./imagens/<?php echo $dadosRecrutamento[$i]["nome_imagem"]; ?>" height="300px" width="500px" alt="">
+               <img src="./imagens/<?php echo  $dadosRecrutamento[$i]["nome_imagem"]?>" height="300px" width="500px" alt="">
                <h3 class="modal-des">DESCRIÇÃO</h3>
                     <p><?php echo $dadosRecrutamento[$i]["descricao"]; ?></p></h3><br><br>
-               <a href="<?php echo $dadosRecrutamento[$i]["link"]; ?>"><button>CONTATO</button></a>
+               <a href="<?php echo $dadosRecrutamento[$i]["link"] ?>"><button>CONTATO</button></a>
          </div>
          <?php
 

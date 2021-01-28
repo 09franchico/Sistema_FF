@@ -1,7 +1,4 @@
 
-let back=document.querySelector(".geral-painel");
-back.style.backgroundImage ="url('img/bannerPainel.png')";
-
 
 
 //abrir menu do painel
@@ -49,6 +46,7 @@ principal.addEventListener("click",()=>{
          },200);
         pegar.classList.add("form-painel2");
         remover2();
+        sumirHomer();
         
     }
 })
@@ -63,12 +61,14 @@ menuRecrutamento.addEventListener("click",()=>{
         pegarModal.style.opacity=0;
         
         
+        
     }else{
         setTimeout(()=>{
             pegarModal.style.opacity = 1; // efeito 
          },200);
         pegarModal.classList.add("form-painel2");
         remove1();
+        sumirHomer();
            
 
 
@@ -90,4 +90,18 @@ function remover2(){
     sumir.style.opacity=0;
 
 }
+
+
+
+//sumir camp 
+
+function sumirHomer(){
+    let sumir2 = document.querySelector(".camp-publicados");
+        sumir2.style.display="none";
+        
+}
+
+
+
+
 

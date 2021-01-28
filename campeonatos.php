@@ -37,9 +37,9 @@ if(isset($_GET["tipo"])){
         <div class="menu">
             <img id="img-menu" src="img/menu.png" height="40px" width="40px" alt="">
             <ul>
-                <a href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
-                <a href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
-                <a href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
+                <a class="mnu" href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
+                <a class="mnu" href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
+                <a class="mnu" href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
             </ul>
         </div>
     </div>
@@ -48,6 +48,10 @@ if(isset($_GET["tipo"])){
     <div class="banner-camp">
         <img src="img/novobanner2.png" height="400px" width="100%" alt="">
     </div>
+     
+
+
+
 
     <!--lista campeonatos-->
     <div class="camp-principal">
@@ -65,8 +69,8 @@ if(isset($_GET["tipo"])){
             for ($i=0; $i <count($dadosCamp) ; $i++) { 
 
             ?><div class="item-camp">
-                <img src="./imagens/<?php echo $dadosCamp[$i]["imagem"];?>" height="200px" width="350px" alt="">
-                <h3 class="justificar" style="font-family: Arial, Helvetica, sans-serif; font-size: 19pt;"><?php echo $dadosCamp[$i]["titulo"]; ?></h3>
+                <img id="imgF" src="./imagens/<?php echo $dadosCamp[$i]["imagem"];?>" height="200px" width="380px" alt="">
+                <h3 class="justificar" ><?php echo $dadosCamp[$i]["titulo"]; ?></h3>
                 <p>DESCRIÇÃO:</p>
                 <p class="texto" ><?php echo $dadosCamp[$i]["descricao"]; ?> </p>
                 <hr id="linha">
