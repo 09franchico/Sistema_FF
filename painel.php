@@ -22,64 +22,36 @@ if(isset($_POST["titulo"])){
     $link= addslashes($_POST["link"]);
     $id = $_SESSION["email"];
 
-    
-    $imagem = $_FILES["img"]["name"].rand(1,999).'.png';
+     // verificar se os campos estão vazio
+    if(!empty($titulo) && !empty($premiacao) && !empty($tipo)&& !empty($descricao) && !empty($data) && !empty($valor) && !empty($link) ){
+          //verificar se o formato da foto é PNG ou JPG
+         if($_FILES["img"]["type"] == "image/png" || $_FILES["img"]["type"] == "image/jpeg" ){
 
-        // mover a foto para a pasta img
-    move_uploaded_file($_FILES["img"]["tmp_name"],"imagens/".$imagem);
+            $imagem = $_FILES["img"]["name"].rand(1,999).'.png';
+            
+           // mover a foto para a pasta img
+           move_uploaded_file($_FILES["img"]["tmp_name"],"imagens/".$imagem);
 
-    if(!empty($titulo) && !empty($premiacao) && !empty($tipo)&& !empty($descricao) && !empty($data) && !empty($valor) && !empty($link) && !empty($imagem)){
-         $dadosSalvos=$dadosCadastro->cadastroCamp($tipo,$titulo,$premiacao,$descricao,$data,$valor,$imagem,$link,$id);
-         if($dadosSalvos){
-            echo"<script>alert('Dados Publicados com sucesso !')</script>";
-        }else{
-            echo"<script>alert('Erro ao cadastrar')</script>";
-        }
+           // salva os dados
+           $dadosSalvos=$dadosCadastro->cadastroCamp($tipo,$titulo,$premiacao,$descricao,$data,$valor,$imagem,$link,$id);
+           if($dadosSalvos){
+            echo"<script>alert('CAMPEONATO CADASTRADOS NO SITE')</script>";
+               
+           }
+
+         }else{
+
+            echo"<script>alert('FORMATO DE IMAGEM NÃO COMPATIVEL')</script>";
+             
+         }
 
     }else{
 
-        echo"<script>alert('Preenchas todos os Campos')</script>";
+        echo"<script>alert('POR FAVOR ! PREENCHA TODOS OS CAMPOS')</script>";
     }
 
 
 }
-
-?>
-
-<?php
-
-//cadastrar os recrutamento
-if(isset($_POST["descricaoRecruta"])){
-
-    $descricao = $_POST["descricaoRecruta"];
-    $link = $_POST["link"];
-    $id = $_SESSION["email"];
-
-    //pega a imagem e envia para a pasta IMAGENS
-    $imagem = $_FILES["imagem"]["name"].rand(1,999).'.png';
-    move_uploaded_file($_FILES["imagem"]["tmp_name"],"imagens/".$imagem);
-
-    // verifica se os campos nao estao vazio
-    if(!empty($descricao) && !empty($link) && !empty($imagem)){
-        $dadosRecrutamento = $dadosCadastro->recrutamento($descricao,$imagem,$link,$id);
-        if($dadosRecrutamento){
-
-            echo"<script>alert('Dados Publicados com sucesso !')</script>";
-        }else{
-            echo"<script>alert('Erro ao cadastrar')</script>";
-        }
-
-
-    }else{
-        echo"<script>alert('Preenchas todos os Campos')</script>";
-
-    }
-
-
-
-}
-
-
 
 ?>
 
@@ -104,117 +76,84 @@ if(isset($_GET["id"])){
 ?>
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estiloPainel.css">
-    <a href="https://icons8.com/icon/80319/casa"></a>
-    <title>Painel admin</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="inicio-painel">
-        <div class="painel-img">
-          <h2>BEM VINDO</h2>
-        </div>
-        <div class="painel-bv">
-            <h1><?php echo $_SESSION["nome"]  ?> </h1>
+    <div class="cont">
+        <div class="mn">
 
+            <div class="bem-vindo">
+                <h3>BEM VINDO(a)</h3>
+                <h3><?php echo $_SESSION["nome"]  ?></h3>
+            </div>
+
+            <div class="dt">
+                <h3>Deartboard</h3>
+            </div>
+            <ul>
+                <li><a class="link" href=""><img class="img-icon" src="https://img.icons8.com/ios-filled/50/ffffff/home.png"/>Pagina Inicial</a></li>
+                <li><a id="cadastro" class="link" href=""><img class="img-icon" src="https://img.icons8.com/ios-filled/50/ffffff/form.png"/>Cadastro Camp</a></li>
+                <li><a class="link" href=""><img class="img-icon" src="https://img.icons8.com/ios-filled/50/ffffff/phone-contact.png"/>Contatos</a></li>  
+            </ul>
         </div>
-        <div class="painel-sair">
-        <a class="sair" href="logout.php">Sair</a>
+        <div class="painel-principal">
+            <div class="cima">
+                <a href=""><img class="ic" src="https://img.icons8.com/bubbles/50/000000/user-male.png"/></a>
+                <a href="logout.php"><img class="ic" src="https://img.icons8.com/carbon-copy/100/000000/exit.png"/></a>
+            </div>
+            <div class="painel-segun">
+               <!--Campeonatos publicacados-->
+               <div id="camp-sumir">
+                    <?php 
+                        for ($i=0; $i <count($dadosCampeonatoPainel) ; $i++) { 
+                    ?>
+                            <div class="camp-publicado">
+                                <img src="imagens/<?php echo $dadosCampeonatoPainel[$i]["imagem"]  ?>" height="200px" width="400px" alt="">
+                                <h4>TIPO : <?php echo $dadosCampeonatoPainel[$i]["tipo"] ?></h4>
+                                <h4>CAMPEONATO : <?php echo $dadosCampeonatoPainel[$i]["titulo"] ?></h4>
+                                <a  href="painel.php?id=<?php echo $dadosCampeonatoPainel[$i]["id_camp"] ?>"><button class="btn-excluir">Excluir</button></a> 
+                            </div>
+                        
+                        <?php
+                        }
+
+                        ?>
+                </div>
+
+               <!--Formulario-->
+                <div class="form-painel">
+                        <form  action="painel.php" method="POST" enctype="multipart/form-data">
+                            <label id="inicio-form">CADASTRO DE CAMPEONATOS</label><br>
+                            <input type="text" name="titulo" placeholder="TITULO CAMPEONATO" >
+                            <input type="text" name="premiacao" placeholder="PREMIAÇÃO" ><br><br>
+                            <select name="tipo">
+                                <option value="solo">SOLO</option>
+                                <option value="duo">DUO</option> 
+                                <option value="squard">SQUARD</option>
+                            </select><br><br>
+                            <textarea name="descricao" id="" cols="100" rows="10" placeholder="DESCRIÇÃO DO CAMPEONATO"></textarea><br><br>
+                            <input type="date" name="data"  >
+                            <input type="text" name="valor" placeholder="VALOR DO CAMPEONATO"><br><br>
+                            <input class="arquivo" type="file" name="img" placeholder="imagem"><br>
+                            <input type="text" name="link" placeholder="LINK PRA CONTATO WHATSAPP" ><br>
+                            
+                            <label class="label" ><button class="btn-salvar" type="submit">enviar</button></label> 
+                        </form>
+                </div>
+            </div>
         </div>
 
     </div>
-    <div class="cont-painel">
-        <!--Menu-->
-        <div class="menu-painel">
-            <div id="exit-painel" ><img  src="img/exit.png" height="30px" width="30px" alt=""></div>
-             <a href=""><div id="menu-item1" class="menu-item">HOME</div></a>
-            <div id="menu-item2"  class="menu-item">CAMPEONATO</div>
-            <div class="menu-item">CONTATO</div>
-            <div id="menu-item4" class="menu-item">RECRUTAMENTO</div>
-        </div>  
-
-        <!--icon menu-->
-        <div id="menu-painel">
-            <img  src="img/menu.png" height="40px" width="40px" alt="">
-            
-        </div>
-
-        <!--1 formulario-->
-
-        <div class="geral-painel">
-            <!--Mostrar dado do camp no painel-->
-            <div class="camp-publicados">
-              <?php 
-
-              for ($i=0; $i <count($dadosCampeonatoPainel) ; $i++) { 
-                 ?>
-                 <div class="publicados-item">
-                    <h2><?php echo $dadosCampeonatoPainel[$i]["titulo"]  ?></h2>
-                     <img src="imagens/<?php echo $dadosCampeonatoPainel[$i]["imagem"]  ?>" width="380px" height="200px" alt=""><br><br>
-                     <a href="painel.php?id=<?php echo $dadosCampeonatoPainel[$i]["id_camp"] ?>"> <button class="btn-camp-painel">EXCLUIR</button></a> 
-                    
-                 </div>
-                <?php
-                }
-
-                ?>
-
-                
-            </div>
-            <div class="form-painel" >
-                <form  action="painel.php" method="POST" enctype="multipart/form-data">
-                    <label id="inicio-form">CADASTRO DE CAMPEONATOS</label><br>
-                
-                    <input type="text" name="titulo" placeholder="TITULO CAMPEONATO" >
-                    <input type="text" name="premiacao" placeholder="PREMIAÇÃO" ><br><br>
-                    <select name="tipo">
-                        <option value="solo">SOLO</option>
-                        <option value="duo">DUO</option> 
-                        <option value="squard">SQUARD</option>
-                    </select><br><br>
-                    <textarea name="descricao" id="" cols="100" rows="10" placeholder="DESCRIÇÃO DO CAMPEONATO"></textarea><br><br>
-                    <input type="date" name="data"  >
-                    <input type="text" name="valor" placeholder="VALOR DO CAMPEONATO"><br><br>
-                    <input class="arquivo" type="file" name="img" placeholder="imagem"><br>
-                    <input type="text" name="link" placeholder="LINK PRA CONTATO WHATSAPP" ><br>
-                    
-                    <label class="label" ><button type="submit">enviar</button></label> 
-                </form>
-            </div>
-
-            <!--Recrutamento-->
-            <div class="cont-recrutamento">
-                <form action="painel.php" method="POST" enctype="multipart/form-data">
-                    <label id="inicio-form">RECRUTAMENTO</label><br>
-                    <label >
-                        <textarea name="descricaoRecruta" id="" cols="80" rows="10" placeholder="DESCRICAO RECRUTAMENTO"></textarea><br>
-                    </label><br><br>
-                    <label id="file2">
-                        <input class="file" type="file" name="imagem" placeholder="imagem">
-                    </label><br><br>
-                    <label > 
-                        <input  type="text" name="link" placeholder="LINK WHATS" ><br>
-                    </label>
-                    <label class="label" >
-                        <button type="submit">enviar</button>
-                    </label> 
-
-                </form>
-            </div>
-
-
-
-
-
-        </div>
-    </div>
-    
-
     <script src="js/painel.js"></script>
-    
 </body>
 </html>

@@ -2,235 +2,213 @@
 
 body{
     margin: 0px;
-    font-family: roboto,Arial, Helvetica, sans-serif;
+    padding: 0px;
+    font-family:roboto,arial,Helvetica, sans-serif;
 }
 
 
 
+.cont{
+    display: flex;
+}
+.mn{
+    height: auto;
+    width: 300px;
+    background-color: rgb(46, 43, 43);
+    color: white;
+}
+
+/*bem vindo*/
+
+.bem-vindo{
+    text-align:center;
+    margin-top: 10px;
+}
 
 
 
-
-
-/*PAINEL*/
-
-.inicio-painel{
-    background-color: rgb(63, 63, 63);
+h3{
+    margin: 0px;
+}
+.cima{
+    height: 20px;
+    background-color: rgb(46, 115, 175);
     display: flex;
     justify-content: space-between;
-    height: 10px;
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    font-family: roboto,Arial, Helvetica, sans-serif;
-    align-items: center;
+    padding: 10px;
 }
 
-.sair{
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
+.ic{
+    margin-top: -5px;
+    background-color: aliceblue;
+    height: 30px;
+    border-radius: 50%;
 }
-.sair:hover{
-    background-color:blueviolet;
-    color: yellow; 
-}
-
-
-
-/*menu*/
-.cont-painel{
-    display: flex; 
-
-}
-.menu-painel{
-    width: 0px;
-    background-color: rgb(64, 60, 80);
-    transition: 0.8s;
-    display: flex;
-    flex-direction: column;
-    overflow-x:hidden;
-    overflow-y:auto;
-    position: absolute;
-    color: white;
-    height: 91vh;
-}
-
-.menu-item:hover{
-    color: rgb(255, 232, 21);
-    background-color: blueviolet;
-    border-top: 1px solid rgb(18, 1, 49);
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-.menu-abrir{
-    width: 200px;
-}
-
-.menu-item{
- padding: 10px;
- margin-top: 10px;
- font-family: roboto,Arial, Helvetica, sans-serif;
- cursor: pointer;
- color: rgb(250, 244, 244);
- 
-}
-#exit-painel{
-    width: 180px;
-    text-align: left;
-    padding-left: 10px;
+.dt{
     margin-top: 10px;
-    cursor: pointer;
-}
-
-#menu-painel{
-    margin: 5px;
-    cursor: pointer;
-    position: absolute;
-}
-
-
-
-
-/*formularios  GUILDAS*/
-
-.geral-painel{
-    background-color: rgb(161, 161, 161);
-    width: 100%;
-    height: 91vh;
-    display: flex;
-    justify-content: center;
+    background-color: rgb(46, 115, 175);
+    text-align: center;
+    padding: 10px;
     
 }
-
-
-.form-painel{
-    margin: 20px;
-    margin-left:130px;
-    display: none;
-    transition: all 0.5s;
-   
+.img-icon{
+    margin-bottom: -5px;
+    margin-right: 5px;
+    height: 23px;
 }
 
-.form-painel2{
-    display: block;
+ul{
+    
+    padding-left: 10px;
 }
 
+li{
+    list-style-type: none;
+    margin-top: 20px;
+
+}
+
+.link{
+    text-decoration: none;
+    font-size: 15pt;
+    color: white;
+    width: 100px;
+    padding: 5px;
+    border-radius: 2px;
+}
+.link:hover{
+    border-bottom: 1px solid white;
+    color: yellow;
+}
+
+
+
+
+/*painel Princiapl*/
+
+.painel-principal{
+    background-color: rgb(252, 252, 252);
+    flex: 1;
+    height: auto;
+    text-align: center;
+}
+
+
+.painel-segun{
+    background-color: #1e1f20e5;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 530px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.titulo-public{
+    color: rgb(46, 115, 175);
+    font-weight: bold;
+}
+
+.camp-publicado{
+    background-color: blueviolet;
+    padding: 20px;
+    margin: 10px;
+    height: 350px;
+    color: white;
+}
+
+
+.btn-excluir{
+    color: white;
+    background-color: rgb(29, 27, 27);
+    outline: none;
+    border: none;
+    width: 300px;
+    border-radius: 5px;
+    height: 40px;
+    font-family: roboto;
+    font-size: 12pt;
+}
+.btn-excluir:hover{
+    background-color: rgb(66, 44, 90);
+}
+
+
+
+
+
+
+
+/* Formulario do campeonato*/
 
 #inicio-form{
     display: flex;
     justify-content: center;
-    width:100%;
-    color: rgb(15, 15, 15);
-    border: 1px solid black;
-    border-radius: 2px;
+    color: white;
+
 }
 
+.form-painel{
+    display: none;
+}
+form{
+    text-align: left;
+    padding: 10px;
+}
 input{
+    font-family:Roboto, Arial, Helvetica, sans-serif;
     height: 30px;
-    width: 450px;
-    border-radius: 2px;
+    width: 400px;
+    margin: 2px;
     border: none;
     outline: none;
-    padding-left: 10px;
-    margin-left: 10px;
-    font-family: roboto,Arial, Helvetica, sans-serif;
+    padding: 5px;
 }
 select{
-    padding-left: 10px;
-    height: 30px;
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+    height: 25px;
     width: 200px;
-    border-radius: 2px;
     border: none;
     outline: none;
-    color:black;
-    margin-left: 10px;
-    font-family: roboto,Arial, Helvetica, sans-serif;
 }
 textarea{
-    padding-left: 10px;
     border: none;
     outline: none;
-    border-radius: 2px;
-    margin-left: 10px;
-    font-family: roboto,Arial, Helvetica, sans-serif;;
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
 
-}
-h4{
-    margin-left: 10px;
-    margin-bottom: 0px;
-    margin-top: 15px;
-    color: white;
-    font-family: roboto,Arial, Helvetica, sans-serif;
-}
 .arquivo{
-    display: flex;
-    color: whitesmoke;
-    width: 200px;
-    font-family: roboto,Arial, Helvetica, sans-serif;
-    border-radius: 20px;
-    margin-left: -2px;
-}
-button{
-    height: 35px;
-    width: 150px;
+    font-family:Roboto, Arial, Helvetica, sans-serif;
+    height: 25px;
+    width: 400px;
+    margin: -3px;
+    margin-bottom: 10px;
     border: none;
     outline: none;
-    background-color: blueviolet;
+    padding: 5px;
     color: white;
-}
-button:hover{
-    background-color: rgb(91, 13, 163);
+    
 }
 .label{
     display: flex;
-    justify-content:flex-end;
-    padding: 20px;
+    justify-content: flex-end;
+}
+.btn-salvar{
+    height: 30px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+}
+.btn-salvar:hover{
+    background-color: rgb(28, 151, 189);
 }
 
-
-/*FORMULARIO RECRUTAMENTO*/
-.cont-recrutamento{
-    padding: 20px;
-    margin-top: 20px;
-    height: 440px;
+#camp-sumir{
     display: flex;
-    display: none;
-    
-
-}
-.file{
-    margin-left: -2px;
-    font-family:roboto, Arial, Helvetica, sans-serif;
-}
-
-
-.form-painel2{
-    display: block;
-}
-
-
-
-
-
-/*moostrar campeonatos no painel
-
-*/
-
-.camp-publicados{
-    margin-top: 50px;
-    display: flex;
+    width: 100%;
     flex-wrap: wrap;
-    height: 400px;
-    text-align: center;
-}
-.btn-camp-painel{
-    margin: 20px;
-    font-family: roboto,Arial, Helvetica, sans-serif;
-}
-.publicados-item{
-    margin: 10px;
-    background-color: rgb(238, 238, 238);
-    border-radius: 3px;
 }

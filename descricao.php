@@ -54,7 +54,12 @@ if(isset($_GET["id"])){
         <div class="desc-desc">
             <h3 class="justificar"><?php echo $value["titulo"];  ?></h3>
             <h3 class="cor-h3">PREMIAÇÃO: <?php echo $value["premiacao"];  ?></h3>
-            <h3 class="cor-h3">DATA: <?php echo $value["data"];  ?></h3>
+            <h3 class="cor-h3">DATA: <?php $data = $value["data"];
+              $data_tamp = strtotime($data);
+              $data_form = date("d/m/Y",$data_tamp);
+              echo $data_form;
+             ?>
+             </h3>
             <h3 class="cor-h3">VALOR: <?php echo $value["valor"];  ?></h3>
             <h3 >DESCRIÇÃO:</h3>
             <p class="titulo-desc" ><?php echo $value["descricao"];  ?></p>
@@ -75,14 +80,15 @@ if(isset($_GET["id"])){
 
     <!--fotter-->
     <div class="rodape">
-        <div>
-            <ul>
-                <a  class="rodape-esp"  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
-                <a  class="rodape-esp" href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
-                <a  class="rodape-esp" href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
-            </ul>
-        </div>
-    </div>
+         <div class="pe">
+             <ul>
+                 <a class="rodape-esp"  href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/facebook.png"/></li></a>
+                 <a class="rodape-esp" href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/instagram-new.png"/></li></a>
+                 <a class="rodape-esp" href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/youtube-squared.png"/></li></a>
+             </ul>
+             <p class="p-rodape">© All rights reserved Design: FFCAMP - Site ©  </p>
+         </div>
+     </div>
 
 
 

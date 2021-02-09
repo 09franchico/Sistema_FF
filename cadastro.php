@@ -43,7 +43,7 @@ if(isset($_POST["nome"])){
 <body>
     <div class="cont-cad">
         <div class="cad-img">
-            <img class="cad-img" src="img/bannernovo1.png" height="100vh" width="100%" alt="">
+            <img class="cad-img" src="img/imagem1.png" height="100vh" width="100%" alt="">
 
         </div>
         <div class="cad-form">

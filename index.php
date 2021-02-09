@@ -43,9 +43,9 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
            
         </div>
             <div class="slider--width">
-                <div class="slider--item" style="background-image: url(img/imagem1.png);" ></div>
+                <div class="slider--item" style="background-image: url(img/ffcamp.png);" ></div>
                 <div class="slider--item" style="background-image: url(img/imagem2.png);" ></div>
-                <div class="slider--item" style="background-image: url(img/imagem3.png);" ></div>
+                <div class="slider--item" style="background-image: url(img/controle.png);" ></div>
             </div>
     </div>
     <div class="cont-oque">
@@ -116,12 +116,13 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
      
      <!--fotter-->
      <div class="rodape">
-         <div>
+         <div class="pe">
              <ul>
-                 <a class="rodape-esp"  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
-                 <a class="rodape-esp" href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
-                 <a class="rodape-esp" href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
+                 <a class="rodape-esp"  href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/facebook.png"/></li></a>
+                 <a class="rodape-esp" href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/instagram-new.png"/></li></a>
+                 <a class="rodape-esp" href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/youtube-squared.png"/></li></a>
              </ul>
+             <p class="p-rodape">© All rights reserved Design: FFCAMP - Site ©  </p>
          </div>
      </div>
     <script src="js/script.js"></script>

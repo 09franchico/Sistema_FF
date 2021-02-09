@@ -69,14 +69,19 @@ if(isset($_GET["tipo"])){
             for ($i=0; $i <count($dadosCamp) ; $i++) { 
 
             ?><div class="item-camp">
-                <img id="imgF" src="./imagens/<?php echo $dadosCamp[$i]["imagem"];?>" height="200px" width="380px" alt="">
+                <img id="imgF" src="./imagens/<?php echo $dadosCamp[$i]["imagem"];?>" height="200px" width="360px" alt="">
                 <h3 class="justificar" ><?php echo $dadosCamp[$i]["titulo"]; ?></h3>
                 <p>DESCRIÇÃO </p>
                 <p class="texto" ><?php echo $dadosCamp[$i]["descricao"]; ?> </p>
                 <hr id="linha">
                 <h3>PREMIAÇÃO : <?php echo $dadosCamp[$i]["premiacao"]; ?></h3>
                 <p></p>
-                <h3>DATA : <?php echo $dadosCamp[$i]["data"]; ?></h3>
+                <h3>DATA : <?php $data = $dadosCamp[$i]["data"]; 
+                $data_tamp = strtotime($data);
+                $data_form = date("d/m/Y",$data_tamp);
+                echo $data_form;
+                ?>
+               </h3>
                 <h3>VALOR : <?php echo $dadosCamp[$i]["valor"]; ?></h3>
                 <a href="descricao.php?id=<?php echo $dadosCamp[$i]["id_camp"]; ?>"><button>SAIBA MAIS</button></a>
                 
@@ -99,15 +104,15 @@ if(isset($_GET["tipo"])){
 
     <!--fotter-->
     <div class="rodape">
-        <div>
-            <ul>
-                <a  class="rodape-esp"  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
-                <a  class="rodape-esp" href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
-                <a  class="rodape-esp" href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
-            </ul>
-        </div>
-    </div>
-
+         <div class="pe">
+             <ul>
+                 <a class="rodape-esp"  href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/facebook.png"/></li></a>
+                 <a class="rodape-esp" href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/instagram-new.png"/></li></a>
+                 <a class="rodape-esp" href=""><li><img src="https://img.icons8.com/carbon-copy/70/4a90e2/youtube-squared.png"/></li></a>
+             </ul>
+             <p class="p-rodape">© All rights reserved Design: FFCAMP - Site ©  </p>
+         </div>
+     </div>
 
 
    <script src="js/script.js"></script>

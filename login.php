@@ -56,7 +56,7 @@ if(!empty($_POST["email"]) && !empty($_POST["senha"])){
 <body>
     <div class="cont-login">
         <div class="login-img">
-          <img src="img/novobanner2.png" height="170px" width="356px" alt="">
+          <img src="img/lg.png" height="170px" width="356px" alt="">
         </div>
         <div class="login-form">
             <form action="login.php" method="POST">
