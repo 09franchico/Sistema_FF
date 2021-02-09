@@ -43,15 +43,31 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
            
         </div>
             <div class="slider--width">
-                <div class="slider--item" style="background-image: url(img/novobanner2.png);" ></div>
-                <div class="slider--item" style="background-image: url(img/bannernovo.png);" ></div>
-                <div class="slider--item" style="background-image: url(img/novobanner2.png);" ></div>
+                <div class="slider--item" style="background-image: url(img/imagem1.png);" ></div>
+                <div class="slider--item" style="background-image: url(img/imagem2.png);" ></div>
+                <div class="slider--item" style="background-image: url(img/imagem3.png);" ></div>
             </div>
     </div>
+    <div class="cont-oque">
+          <img class="img-text" src="img/imagem2.png" height="300px" width="300px" alt="">
+          <div class="texto-desc">
+          <h2 id="h2-camp1" >O que é o FFCAMP ?</h2>
+          <p id="paragrafo" >É um site grátes para divulgação de campeonatos de FREEFIRE , aqui você apenas realiza um cadastro e publicas seus campeonatos, não perdendo tempo em divulgar em varias plataformas.</p>
+          <p>Com esses pensamento , em ter apenas um lugar para publicar seus torneios , que a FFCAMP foi criada, ja pensou em apenas um lugar você tem os melhores campeonatos!</p>
+          </div>
+    </div>
+    <div class="cont-oque2">
+          <div class="texto-desc2">
+          <h2 id="h2-camp">Objetivo do FFCAMP ?</h2>
+          <p class="paragrafo" >É um site grátes para divulgação de campeonatos de FREEFIRE , aqui você apenas realiza um cadastro e publicas seus campeonatos, não perdendo tempo em divulgar em varias plataformas.</p>
+          <p class="paragrafo">Com esses pensamento , em ter apenas um lugar para publicar seus torneios , que a FFCAMP foi criada, ja pensou em apenas um lugar você tem os melhores campeonatos!</p>
+          </div>
+          <img class="img-text2" src="img/imagem3.png" height="300px" width="300px" alt="">
+    </div>
+    <div>
+          
 
-
-
-     <!--video de apresentação-->
+    </div>
 
     <!--CAMPEONATOS-->
     <div class="conteiner4">
@@ -97,48 +113,17 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
     -->
 
 
-    <!--recrutando-->
-     <div class="rec-inicio">
-         <div class="rec-meio">
-            <h1>GUILDAS RECRUTANDO</h1>
-         </div>
-     </div>
-
-     <div class="conteiner5">
-       <?php
-       
-         for ($i=0; $i <count($dadosRecrutamento) ; $i++) { 
-       
-        ?>
-         <div class="img-divulga" onclick="abrir()" >
-              <img  class="img-foto" src="./imagens/<?php echo $dadosRecrutamento[$i]["nome_imagem"]?>" height="200px" width="400px" alt="">
-         </div>
-         <div class="modal" >
-               <img src="./imagens/<?php echo  $dadosRecrutamento[$i]["nome_imagem"]?>" height="300px" width="500px" alt="">
-               <h3 class="modal-des">DESCRIÇÃO</h3>
-                    <p><?php echo $dadosRecrutamento[$i]["descricao"]; ?></p></h3><br><br>
-               <a href="<?php echo $dadosRecrutamento[$i]["link"] ?>"><button>CONTATO</button></a>
-         </div>
-         <?php
-
-           }
-
-         ?>
-
      
      <!--fotter-->
      <div class="rodape">
          <div>
              <ul>
-                 <a  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
-                 <a href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
-                 <a href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
+                 <a class="rodape-esp"  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
+                 <a class="rodape-esp" href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
+                 <a class="rodape-esp" href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
              </ul>
          </div>
      </div>
-
-
-
     <script src="js/script.js"></script>
 </body>
 </html>

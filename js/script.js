@@ -46,15 +46,3 @@ function updateMargin(){
 
 
 
-//abrir a img guilda
-
-function abrir(){
-    let aparecer = document.querySelector('.modal');
-   if(aparecer.style.display =="none"){
-        aparecer.style.display="block";
-    }else{
-        aparecer.style.display="none";
-    }
-
-}
-//abrir();

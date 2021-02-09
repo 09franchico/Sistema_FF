@@ -46,7 +46,7 @@ if(isset($_GET["tipo"])){
 
     <!--banner-->
     <div class="banner-camp">
-        <img src="img/novobanner2.png" height="400px" width="100%" alt="">
+        <img src="img/imagem1.png" height="400px" width="100%" alt="">
     </div>
      
 
@@ -71,13 +71,13 @@ if(isset($_GET["tipo"])){
             ?><div class="item-camp">
                 <img id="imgF" src="./imagens/<?php echo $dadosCamp[$i]["imagem"];?>" height="200px" width="380px" alt="">
                 <h3 class="justificar" ><?php echo $dadosCamp[$i]["titulo"]; ?></h3>
-                <p>DESCRIÇÃO:</p>
+                <p>DESCRIÇÃO </p>
                 <p class="texto" ><?php echo $dadosCamp[$i]["descricao"]; ?> </p>
                 <hr id="linha">
-                <h3>PREMIAÇÃO: <?php echo $dadosCamp[$i]["premiacao"]; ?></h3>
+                <h3>PREMIAÇÃO : <?php echo $dadosCamp[$i]["premiacao"]; ?></h3>
                 <p></p>
-                <h3>DATA:<?php echo $dadosCamp[$i]["data"]; ?></h3>
-                <h3>VALOR:<?php echo $dadosCamp[$i]["valor"]; ?></h3>
+                <h3>DATA : <?php echo $dadosCamp[$i]["data"]; ?></h3>
+                <h3>VALOR : <?php echo $dadosCamp[$i]["valor"]; ?></h3>
                 <a href="descricao.php?id=<?php echo $dadosCamp[$i]["id_camp"]; ?>"><button>SAIBA MAIS</button></a>
                 
             </div> 
@@ -101,9 +101,9 @@ if(isset($_GET["tipo"])){
     <div class="rodape">
         <div>
             <ul>
-                <a  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
-                <a href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
-                <a href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
+                <a  class="rodape-esp"  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
+                <a  class="rodape-esp" href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
+                <a  class="rodape-esp" href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
             </ul>
         </div>
     </div>

@@ -16,7 +16,6 @@ if(isset($_GET["id"])){
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,14 +49,13 @@ if(isset($_GET["id"])){
         ?>
         
         <div class="desc-img">
-            <img src="./imagens/<?php echo $value["imagem"]; ?>" height="500px" width="620px" alt="">
+            <img src="./imagens/<?php echo $value["imagem"]; ?>" height="500px" width="900px" alt="">
         </div>
         <div class="desc-desc">
-          
             <h3 class="justificar"><?php echo $value["titulo"];  ?></h3>
-            <h3>PREMIAÇÃO:<?php echo $value["premiacao"];  ?></h3>
-            <h3>DATA:<?php echo $value["data"];  ?></h3>
-            <h3>VALOR:<?php echo $value["valor"];  ?></h3>
+            <h3 class="cor-h3">PREMIAÇÃO: <?php echo $value["premiacao"];  ?></h3>
+            <h3 class="cor-h3">DATA: <?php echo $value["data"];  ?></h3>
+            <h3 class="cor-h3">VALOR: <?php echo $value["valor"];  ?></h3>
             <h3 >DESCRIÇÃO:</h3>
             <p class="titulo-desc" ><?php echo $value["descricao"];  ?></p>
             <div class="desc-button">
@@ -79,9 +77,9 @@ if(isset($_GET["id"])){
     <div class="rodape">
         <div>
             <ul>
-                <a  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
-                <a href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
-                <a href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
+                <a  class="rodape-esp"  href=""><li><img src="img/facebook.png" height="50px" width="50px" alt=""></li></a>
+                <a  class="rodape-esp" href=""><li><img src="img/instagran.png" height="50px" width="50px" alt=""></li></a>
+                <a  class="rodape-esp" href=""><li><img src="img/youtube.png" height="50px" width="50px" alt=""></li></a>
             </ul>
         </div>
     </div>
