@@ -28,9 +28,9 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
         <div class="menu">
             <img id="img-menu" src="img/menu.png" height="40px" width="40px" alt="">
             <ul>
-                <a class="mnu" href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
-                <a class="mnu" href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
-                <a class="mnu" href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
+                <a class="mnu" href="index.php"><li><img src="https://img.icons8.com/android/20/ffffff/home.png"/>&nbsp; HOME</li></a>
+                <a class="mnu" href="contato.php"><li><img src="https://img.icons8.com/ios-filled/20/ffffff/phone.png"/>&nbsp; CONTATO</li></a>
+                <a class="mnu" href="login.php"><li><img src="https://img.icons8.com/material-sharp/20/ffffff/enter-2.png"/>&nbsp; LOGIN</li></a>
             </ul>
         </div>
     </div>
@@ -59,8 +59,8 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
     <div class="cont-oque2">
           <div class="texto-desc2">
           <h2 id="h2-camp">Objetivo do FFCAMP ?</h2>
-          <p class="paragrafo" >É um site grátes para divulgação de campeonatos de FREEFIRE , aqui você apenas realiza um cadastro e publicas seus campeonatos, não perdendo tempo em divulgar em varias plataformas.</p>
-          <p class="paragrafo">Com esses pensamento , em ter apenas um lugar para publicar seus torneios , que a FFCAMP foi criada, ja pensou em apenas um lugar você tem os melhores campeonatos!</p>
+          <p class="paragrafo" >Nosso objetivo é crecer ainda mais a comunidade do FREEFIRE e ajudar aqueles jogadores que pretendem realizar um campeonato e ter a duvida de por onde começar?</p>
+          <p class="paragrafo">Aqui você encontrar todos os tipos de campeonatos (SOLO, DUO, SQUARD ).Faça parte, apenas CADASTRE-SE e aproveite a plataforma !</p>
           </div>
           <img class="img-text2" src="img/imagem3.png" height="300px" width="300px" alt="">
     </div>

@@ -37,9 +37,9 @@ if(isset($_GET["tipo"])){
         <div class="menu">
             <img id="img-menu" src="img/menu.png" height="40px" width="40px" alt="">
             <ul>
-                <a class="mnu" href="index.php"><li><img src="img/home.png" height="20px" width="20px" alt="">&nbsp; HOME</li></a>
-                <a class="mnu" href="contato.php"><li><img src="img/email.png" height="20px" width="20px" alt="">&nbsp; CONTATO</li></a>
-                <a class="mnu" href="login.php"><li><img src="img/login.png" height="20px" width="20px" alt="">&nbsp; LOGIN</li></a>
+            <a class="mnu" href="index.php"><li><img src="https://img.icons8.com/android/20/ffffff/home.png"/>&nbsp; HOME</li></a>
+                <a class="mnu" href="contato.php"><li><img src="https://img.icons8.com/ios-filled/20/ffffff/phone.png"/>&nbsp; CONTATO</li></a>
+                <a class="mnu" href="login.php"><li><img src="https://img.icons8.com/material-sharp/20/ffffff/enter-2.png"/>&nbsp; LOGIN</li></a>
             </ul>
         </div>
     </div>
