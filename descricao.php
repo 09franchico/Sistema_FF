@@ -22,7 +22,8 @@ if(isset($_GET["id"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>pagina campeonato</title>
+    <title>pagina descrição</title>
+    <link class="icon" rel="icon" href="img/imagem1.png" type="image/x-icon" />
 </head>
 <body>
        <!--menu-->
@@ -52,17 +53,17 @@ if(isset($_GET["id"])){
             <img src="./imagens/<?php echo $value["imagem"]; ?>" height="500px" width="900px" alt="">
         </div>
         <div class="desc-desc">
-            <h3 class="justificar"><?php echo $value["titulo"];  ?></h3>
-            <h3 class="cor-h3">PREMIAÇÃO: <?php echo $value["premiacao"];  ?></h3>
-            <h3 class="cor-h3">DATA: <?php $data = $value["data"];
+            <h3 class="justificar"><?php echo strtoupper($value["titulo"]) ;  ?></h3>
+            <h3 class="cor-h3"><img class="img-t" src="https://img.icons8.com/plasticine/30/000000/trophy.png"/> <?php echo $value["premiacao"];  ?></h3>
+            <h3 class="cor-h3"><img class="img-t" src="https://img.icons8.com/plasticine/30/000000/leave.png"/> <?php $data = $value["data"];
               $data_tamp = strtotime($data);
               $data_form = date("d/m/Y",$data_tamp);
               echo $data_form;
              ?>
              </h3>
-            <h3 class="cor-h3">VALOR: <?php echo $value["valor"];  ?></h3>
+            <h3 class="cor-h3"><img class="img-t" src="https://img.icons8.com/doodle/30/000000/money.png"/> <?php echo $value["valor"];  ?></h3>
             <h3 >DESCRIÇÃO:</h3>
-            <p class="titulo-desc" ><?php echo $value["descricao"];  ?></p>
+            <p class="titulo-desc" ><?php echo nl2br($value["descricao"]) ; ?></p>
             <div class="desc-button">
                 <a href="<?php echo $value["link"];  ?>"><button>INSCREVA-SE</button></a>
             </div>

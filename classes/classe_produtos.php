@@ -41,8 +41,7 @@ class produtos{
    }
 
       
-     //dados dos campeonatos 
-
+    //dados dos campeonatos 
    public function buscarCamp($tipo){
 
         
@@ -118,6 +117,8 @@ class produtos{
    }
 
 
+
+
   // / pegar os dados do campe NO BANCO DE DADOS e mostrar no painel  
    public function pegarDadosCamp($id){
 
@@ -135,11 +136,47 @@ class produtos{
 
    }
 
+
+
+
    //deletar o CAMPEONATO pelo ID no PAINEL
-   public function deletar($id_d){
+      public function deletar($id_d){
        $cmd= $this->pdo->prepare("DELETE from campeonatos where id_camp = :id");
        $cmd -> bindValue(":id",$id_d);
        $cmd -> execute();  
+
+   }
+
+
+
+
+
+  ///paginação tentando
+   public function paginacao($pagina,$tipo){
+       
+    try {
+
+       $limite = 6;
+       $inicio = ($limite * $pagina) - $limite;
+       $cmd = $this->pdo->prepare("SELECT * from campeonatos where tipo=:t limit :inicio, :limite");
+       $cmd-> bindValue(":t",$tipo);
+       $cmd -> bindValue(":inicio",$inicio,PDO::PARAM_INT);
+       $cmd -> bindValue(":limite",$limite, PDO::PARAM_INT);
+       $cmd -> execute();
+
+       $res = $cmd -> fetchAll(PDO::FETCH_ASSOC);
+
+       return $res;
+       
+
+    } catch (\PDOException $th) {
+
+        return "ERRO".$th->getMessage();
+        
+    }
+
+
+
 
    }
 

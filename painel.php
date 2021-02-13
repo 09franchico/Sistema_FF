@@ -86,7 +86,8 @@ if(isset($_GET["id"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estiloPainel.css">
-    <title>Document</title>
+    <title>painel</title>
+    <link class="icon" rel="icon" href="img/imagem1.png" type="image/x-icon" />
 </head>
 <body>
     <div class="cont">

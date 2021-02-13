@@ -4,14 +4,31 @@
 body{
     margin: 0%;
     font-family: roboto;
+
 }
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(21, 21, 22);
+}
+::-webkit-scrollbar-track-piece{
+    background-color: rgb(122, 121, 121);
+}
+
 
 
 
 /*container1*/
 
 .conteiner1{
-    background-color:rgb(21, 22, 22);
+    background-color:rgba(21, 22, 22,0.5);
     display: flex;
     justify-content: flex-end;
     padding: 5px;
@@ -19,7 +36,6 @@ body{
     position: fixed;
     z-index: 999;
     width: 100%;
-    opacity: 0.9;
 }
 .conteiner1-2{
     background-color:rgb(22, 21, 21);
@@ -27,7 +43,6 @@ body{
     justify-content: space-between;
     padding: 5px;
     height: 60px;
-    width: 100%;
     justify-content: flex-end;
     border-bottom: 2px solid white;
 }
@@ -151,13 +166,19 @@ li{
     margin-left: 100px;
     margin-right: 80px;
     border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px rgb(116, 9, 165)
+}
+.img-text:hover{
+    transform: rotatey(360deg);
+    transition: all 1s;
 }
 .texto-desc{
     padding-top: 50px;
-    height: 300px;
+    height: 200px;
     width: 600px;
-    padding: 10px;
-    margin-top: 50px;
+    padding: 20px;
+    margin-top: -50px;
+    border-radius: 2px;
 }
 
 #h2-camp1{
@@ -167,8 +188,11 @@ li{
 
 
 
+
+
 .cont-oque2{
     background-color: rgb(92, 134, 250);
+    background: radial-gradient(rgb(116, 9, 165),rgb(21, 20, 22));
     height: 400px;
     padding: 30px;
     display: flex;
@@ -179,6 +203,11 @@ li{
     margin-left: 100px;
     margin-right: 50px;
     border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px rgb(252, 252, 253);
+}
+.img-text2:hover{
+    transform: rotatey(360deg);
+    transition: all 1s;
 }
 .texto-desc2{
     padding-top: 50px;
@@ -258,6 +287,10 @@ video{
     border-radius: 5px;
     box-shadow: 0px 0px 40px 0px rgb(51, 51, 51);
 }
+.camp-solo:hover{
+    transform: scale(1.06);
+    transition: all 1s;
+}
 .camp-duo{
     height: 420px;
     background-color: white;
@@ -267,6 +300,10 @@ video{
     border: 1px solid rgb(196, 173, 173);
     border-radius: 5px;
     box-shadow: 0px 0px 40px 0px rgb(51, 51, 51);
+}
+.camp-duo:hover{
+    transform: scale(1.06);
+    transition: all 1s;
 }
 .camp-squard{
     height: 420px;
@@ -278,6 +315,10 @@ video{
     border-radius: 5px;
     box-shadow: 0px 0px 40px 0px rgb(51, 51, 51);
 }
+.camp-squard:hover{
+    transform: scale(1.06);
+    transition: all 1s;
+}
 .x-treino{
     height: 420px;
     background-color: white;
@@ -287,6 +328,12 @@ video{
     border: 1px solid rgb(196, 173, 173);
     border-radius: 5px;
     box-shadow: 0px 0px 40px 0px rgb(51, 51, 51);
+}
+
+.x-treino:hover{
+    transform: scale(1.06);
+    transition: all 1s;
+
 }
 button{
     margin-top: 20px;
@@ -410,8 +457,13 @@ hr{
 .rodape-esp{
     margin-right: 20px;
 }
+.rodape-esp:hover{
+    box-shadow: 0px 0px 10px 0px white;
+    border-radius: 50%;
+}
 .p-rodape{
     color: white;
+    
 }
 
 .mouse{
@@ -444,45 +496,58 @@ hr{
     justify-content: center;
     width: 100%;
     height: 100vh;
+    background-image: url('../img/controle.png');
+    background-size: cover;
 
 }
-.login-img{
-    border: 1px solid black;
-}
+
 .login-form{
     text-align: center;
-    background-color: rgb(25, 29, 36);
+    background-color: rgba(21, 22, 22,0);
     padding: 11px;
     margin-top: -5px;
   
 }
 .input-log{
+    background-color: rgba(197, 192, 192,0);
+    font-size: 20pt;
+    font-weight: bolder;
     font-family: Roboto,Arial, Helvetica, sans-serif;
-    padding: 8px;
-    width: 300px;
+    padding: 10px;
+    width: 400px;
     margin: 10px;
     border: none;
     outline: none;
     border-bottom: 2px solid rgb(173, 18, 235);
     opacity: 0.9;
+    color: white;
 
 }
+.input-log::placeholder{
+    color: white;
+    font-size: 19pt;
+}
+
+
 .but-login{
-    background-color: rgb(17, 158, 80);
+    background-color: rgb(7, 45, 102);
+    padding: 15px;
     border-radius: 5px;
-    width: 201px;
+    width: 250px;
+    font-size: 15pt;
 }
 .but-login:hover{
     background-color: rgb(173, 18, 235);
 }
 label{
-    color: white;
-    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    font-size: 20pt;
+    font-weight: bolder;
     padding: 0px;
 }
 #link-login{
     margin-left: 10px;
-    color: rgb(85, 240, 46);
+    color: rgb(255, 231, 14);
 }
 
 
@@ -555,10 +620,11 @@ h3{
 }
 .item-camp{
     border-radius: 5px;
-    background-color:#000000d0;
-    color: white;
+    background: linear-gradient(-180deg,rgb(90, 198, 248),rgb(255, 254, 254));
+    color: rgb(16, 19, 219);
     width: 360px;
     height: 530px;
+    box-sizing: content-box;
     text-align:center;
     padding: 20px;
     margin-top: 70px;
@@ -566,25 +632,66 @@ h3{
     margin-bottom: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
-    box-shadow: 0px 0px 50px 0px black;
+    box-shadow: 0px 0px 10px 0px black;
    
+}
+.item-camp:hover{
+    transform: scale(0.95);
+    transition: all 1s;
+    box-shadow: 0px 0px 20px 0px rgb(123, 48, 192);
+
 }
 .justificar{
     font-size: 20pt;
     text-align: center;
-    color: white;
+    color: rgb(77, 75, 75);
     font-family:roboto, Arial, Helvetica, sans-serif;
 
 }
 
 .texto{
     overflow: hidden;
-    text-overflow: ellipsis; 
     width: 360px;
     height: 20px;
     padding: 2px;
     text-align: justify;
+    color: rgb(0, 0, 0);
+}
+.sem{
+    font-family: roboto;
+    color: rgb(31, 29, 28);
+    background-color: rgb(36, 110, 207);
+    padding: 30px;
+    border-radius: 5px;
     color: white;
+}
+.paginacao{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(38, 144, 206);
+    padding: 5px;
+}
+.btn-pag{
+    margin: 5px;
+    text-decoration: none;
+    color: aliceblue;
+    background-color: rgb(71, 12, 99);
+    padding: 10px;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+}
+.btn-pag:hover{
+    background-color: rgb(216, 96, 27);
+}
+
+.h3-m{
+    font-size: 18pt;
+    margin: 2px;
+    color: rgb(0, 0, 0);
+}
+.img-t{
+    margin-bottom: -5px;
 }
 
 
@@ -625,7 +732,14 @@ h3{
 
 .cor-h3{
     color: rgb(255, 255, 255);
-    font-size: 15pt;
+    font-size: 18pt;
 }
 
 
+/*MODIFICAR O SCROOL DA PAGINA*/
+
+
+::-webkit-scrollbar-track {
+    background-color: #a72f2f;
+    color: #a72f2f;
+}

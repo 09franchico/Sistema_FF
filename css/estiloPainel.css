@@ -14,7 +14,7 @@ body{
 .mn{
     height: auto;
     width: 300px;
-    background-color: rgb(46, 43, 43);
+    background: linear-gradient(90deg,rgb(23, 23, 24),rgb(93, 17, 122));
     color: white;
 }
 
@@ -84,6 +84,8 @@ li{
 
 
 
+
+
 /*painel Princiapl*/
 
 .painel-principal{
@@ -95,7 +97,7 @@ li{
 
 
 .painel-segun{
-    background-color: #1e1f20e5;
+    background: linear-gradient(90deg,rgb(8, 8, 8),rgba(16, 22, 99, 0.61));
     width: auto;
     display: flex;
     justify-content: center;

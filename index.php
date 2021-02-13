@@ -16,7 +16,8 @@ $dadosRecrutamento = $dadosclasse->pegarRecrutamento();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Pagina home</title>
+    <title >Pagina home</title>
+    <link class="icon" rel="icon" href="img/imagem1.png" type="image/x-icon" />
 </head>
 <body>
 

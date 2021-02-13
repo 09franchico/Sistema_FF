@@ -5,14 +5,25 @@ require("classes/classe_produtos.php");
 $dadosProduto = new produtos("sistema_ff","localhost:3307","root","");
 
 
-if(isset($_GET["tipo"])){
+  if(isset($_GET["tipo"])){
 
-    $tipo =addslashes($_GET["tipo"]);
-    $dadosCamp = $dadosProduto ->buscarCamp($tipo);
+
+    $tipo =$_GET["tipo"];
+    //$dadosCamp = $dadosProduto ->buscarCamp($tipo);
+
+    //pega o valor que vem pelo id da pagina
+    $pagina = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 1;
+
+    //$tipo = $_GET["tipo"]; 
+    // contar quantos campeonatos temos no banco de dados referente ae tipo
+    $limite = 6;
+    $total_linha = $dadosProduto ->buscarCamp($tipo);
+    $total_camp = ceil(count($total_linha)/$limite);
+
+    //buscou os dados referente ao tipo e a quantidade que irão aparecer na paginação
+    $resultado = $dadosProduto ->paginacao($pagina,$tipo);
 
 }
-
-
 
 
 
@@ -27,6 +38,7 @@ if(isset($_GET["tipo"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <title>pagina campeonato</title>
+    <link class="icon" rel="icon" href="img/imagem1.png" type="image/x-icon" />
 </head>
 <body>
       <!--menu-->
@@ -63,27 +75,26 @@ if(isset($_GET["tipo"])){
     
          <?php 
 
-            if(!empty($dadosCamp)){
+            if(!empty($resultado)){
             
         // for para colocar od dados no formuario.
-            for ($i=0; $i <count($dadosCamp) ; $i++) { 
+            for ($i=0; $i <count($resultado) ; $i++) { 
 
             ?><div class="item-camp">
-                <img id="imgF" src="./imagens/<?php echo $dadosCamp[$i]["imagem"];?>" height="200px" width="360px" alt="">
-                <h3 class="justificar" ><?php echo $dadosCamp[$i]["titulo"]; ?></h3>
+                <img id="imgF" src="./imagens/<?php echo $resultado[$i]["imagem"];?>" height="200px" width="360px" alt="">
+                <h3 class="justificar" ><?php echo strtoupper( $resultado[$i]["titulo"]) ?></h3>
                 <p>DESCRIÇÃO </p>
-                <p class="texto" ><?php echo $dadosCamp[$i]["descricao"]; ?> </p>
+                <p class="texto" ><?php echo $resultado[$i]["descricao"]; ?> </p>
                 <hr id="linha">
-                <h3>PREMIAÇÃO : <?php echo $dadosCamp[$i]["premiacao"]; ?></h3>
-                <p></p>
-                <h3>DATA : <?php $data = $dadosCamp[$i]["data"]; 
+                <h3 class="h3-m"><img class="img-t" src="https://img.icons8.com/plasticine/30/000000/trophy.png"/> <?php echo $resultado[$i]["premiacao"]; ?></h3>
+                <h3 class="h3-m"><img class="img-t" src="https://img.icons8.com/plasticine/30/000000/leave.png"/> <?php $data = $resultado[$i]["data"]; 
                 $data_tamp = strtotime($data);
                 $data_form = date("d/m/Y",$data_tamp);
                 echo $data_form;
                 ?>
                </h3>
-                <h3>VALOR : <?php echo $dadosCamp[$i]["valor"]; ?></h3>
-                <a href="descricao.php?id=<?php echo $dadosCamp[$i]["id_camp"]; ?>"><button>SAIBA MAIS</button></a>
+                <h3 class="h3-m"><img class="img-t" src="https://img.icons8.com/doodle/30/000000/money.png"/> <?php echo $resultado[$i]["valor"]; ?></h3>
+                <a href="descricao.php?id=<?php echo $resultado[$i]["id_camp"]; ?>"><button>SAIBA MAIS</button></a>
                 
             </div> 
             <?php
@@ -91,12 +102,27 @@ if(isset($_GET["tipo"])){
             }
         }else{
 
-            echo"SEM CAMPEONATOS NO MOMENTO !";
-        }
-
+            ?><h1 class='sem'>SEM CAMPEONATOS NO MOMENTO ! <img class="img-triste" src="https://img.icons8.com/metro/70/000000/sad.png"/></h1>
+             <?php
+             //header("location:index.php");
+          }
              ?>  
 
 
+        </div>
+        <div class="paginacao">
+
+           <?php
+              // condição para pagina voltar e proximo
+                if($pagina>1){
+                    echo ' <a class="btn-pag" href="campeonatos.php?pag='.($pagina - 1).'&tipo='.$resultado[0]["tipo"].'">voltar</a> ';
+                }
+                if($pagina < $total_camp ){
+                    echo ' <a  class="btn-pag" href="campeonatos.php?pag='.($pagina + 1).'&tipo='.$resultado[0]["tipo"].'">proximo</a>';
+                }
+
+           ?>
+            
         </div>
         
 

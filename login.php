@@ -52,20 +52,18 @@ if(!empty($_POST["email"]) && !empty($_POST["senha"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <title>login</title>
+    <link class="icon" rel="icon" href="img/imagem1.png" type="image/x-icon" />
 </head>
 <body>
     <div class="cont-login">
-        <div class="login-img">
-          <img src="img/lg.png" height="170px" width="356px" alt="">
-        </div>
         <div class="login-form">
+            <h2><img src="https://img.icons8.com/nolan/64/3d-rotate.png"/></h2>
             <form action="login.php" method="POST">
-                <input class="input-log" type="email" name="email" placeholder="email"><br>
-                <input class="input-log" type="password" name="senha" placeholder="Senha"><br>
-                <button type="submit" class="but-login">Entrar</button><br><br>
+                <input class="input-log" type="email" name="email" placeholder="EMAIL"><br>
+                <input class="input-log" type="password" name="senha" placeholder="SENHA"><br>
+                <button type="submit" class="but-login">ENTRAR</button><br><br>
                 <label for="">Ainda não é cadastrado ?<a id="link-login" href="cadastro.php">CADASTRE-SE</a></label>
             </form>
-
         </div>
         
 
